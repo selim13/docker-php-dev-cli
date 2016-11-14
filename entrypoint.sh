@@ -1,9 +1,12 @@
 #!/bin/bash
+set -e
+
+chmod 700 /home/developer/.ssh
+chmod 600 /home/developer/.ssh/*
+
 # Author: Jonathan Meyer <jon@gisjedi.com>
 # Source: https://github.com/gisjedi/gosu-entrypoint
 # Version: master
-
-set -e
 
 # If GOSU_CHOWN environment variable set, recursively chown all specified directories
 # to match the user:group set in GOSU_USER environment variable.
